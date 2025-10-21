@@ -1,0 +1,23 @@
+name: Snowflake OIDC
+on: [push]
+
+permissions:
+  id-token: write # Required for OIDC token generation
+  contents: read
+
+jobs:
+  oidc-job:
+    runs-on: ubuntu-latest
+    environment: "test-env" # this should match the environment used in the subject
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - name: Set up Snowflake CLI
+        uses: snowflakedb/snowflake-cli-action@v2.0
+        with:
+          use-oidc: true
+      - name: test connection
+        env:
+          SNOWFLAKE_ACCOUNT: qm18685
+        run: snow connection test -x
