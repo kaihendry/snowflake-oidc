@@ -1,5 +1,8 @@
 name: Snowflake OIDC
-on: [push]
+# allow run by cli
+on:
+  workflow_dispatch:
+  push:
 
 permissions:
   id-token: write # Required for OIDC token generation
