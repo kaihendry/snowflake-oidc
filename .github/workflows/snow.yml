@@ -23,4 +23,4 @@ jobs:
       - name: test connection
         env:
           SNOWFLAKE_ACCOUNT: XBJFXNG-QM18685
-        run: snow connection test -x --debug
+        run: snow connection test -x
