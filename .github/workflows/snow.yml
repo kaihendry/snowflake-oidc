@@ -19,5 +19,5 @@ jobs:
           use-oidc: true
       - name: test connection
         env:
-          SNOWFLAKE_ACCOUNT: qm18685
-        run: snow connection test -x
+          SNOWFLAKE_ACCOUNT: XBJFXNG-QM18685
+        run: snow connection test -x --debug
