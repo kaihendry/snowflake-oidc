@@ -120,13 +120,3 @@ resource "snowflake_grant_privileges_to_account_role" "grant_future_tables" {
     }
   }
 }
-
-# Output the OIDC configuration details for reference
-output "oidc_issuer" {
-  value = "https://token.actions.githubusercontent.com"
-}
-
-output "oidc_subject" {
-  value       = "repo:kaihendry/snowman:environment:test-env"
-  description = "GitHub OIDC subject for the service user. Update this to match your repository and environment."
-}
