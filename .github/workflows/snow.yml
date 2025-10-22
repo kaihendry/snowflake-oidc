@@ -11,7 +11,7 @@ permissions:
 jobs:
   oidc-job:
     runs-on: ubuntu-latest
-    environment: "test-foo" # this should match the environment used in the subject
+    environment: "test-env" # this should match the environment used in the subject
     steps:
       - uses: actions/checkout@v5
         with:
