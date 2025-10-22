@@ -37,7 +37,7 @@ resource "snowflake_execute" "create_service_user" {
     WORKLOAD_IDENTITY = (
       TYPE = OIDC,
       ISSUER = 'https://token.actions.githubusercontent.com',
-      SUBJECT = 'repo:kaihendry/snowman:environment:test-env'
+      SUBJECT = 'repo:kaihendry/snowflake-oidc:environment:test-env'
     )
   SQL
 
